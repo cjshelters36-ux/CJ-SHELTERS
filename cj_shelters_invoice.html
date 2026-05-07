@@ -14,39 +14,55 @@
   --gold:#c9a227; --gold2:#e8c547;
   --white:#ffffff; --text:#2c3e50;
 }
-body{font-family:'Lato',sans-serif;background:linear-gradient(135deg,#0d1f3c 0%,#152848 50%,#0d1f3c 100%);min-height:100vh;padding:28px 16px;}
+/* BASE FONT SIZE 14px for readability */
+body{font-family:'Lato',sans-serif;font-size:14px;background:linear-gradient(135deg,#0d1f3c 0%,#152848 50%,#0d1f3c 100%);min-height:100vh;padding:28px 16px;}
 .app-header{text-align:center;margin-bottom:24px;}
-.app-header h1{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.9rem;letter-spacing:2px;}
-.app-header p{color:rgba(255,255,255,0.55);font-size:.78rem;margin-top:3px;letter-spacing:1.5px;text-transform:uppercase;}
-.main{display:grid;grid-template-columns:400px 1fr;gap:22px;max-width:1280px;margin:0 auto;}
+.app-header h1{font-family:'Playfair Display',serif;color:var(--gold);font-size:2.1rem;letter-spacing:2px;}
+.app-header p{color:rgba(255,255,255,0.6);font-size:.85rem;margin-top:3px;letter-spacing:1.5px;text-transform:uppercase;}
+.main{display:grid;grid-template-columns:430px 1fr;gap:22px;max-width:1320px;margin:0 auto;}
 
 /* FORM */
 .form-panel{background:#fff;border-radius:14px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,0.45);border-top:4px solid var(--gold);}
-.form-panel h2{font-family:'Playfair Display',serif;color:var(--navy);font-size:1.1rem;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:7px;}
-.section-lbl{font-size:.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin:16px 0 7px;}
+.form-panel h2{font-family:'Playfair Display',serif;color:var(--navy);font-size:1.2rem;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:7px;}
+.section-lbl{font-size:.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin:16px 0 7px;}
 .field{margin-bottom:12px;}
-.field label{display:block;font-size:.74rem;font-weight:700;color:var(--navy);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;}
-.field input,.field textarea{width:100%;padding:9px 12px;border:1.5px solid #e0e0e0;border-radius:7px;font-family:'Lato',sans-serif;font-size:.86rem;color:var(--text);transition:border-color .2s;background:#fafafa;}
+.field label{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:5px;text-transform:uppercase;letter-spacing:.4px;}
+.field input,.field textarea{width:100%;padding:10px 13px;border:1.5px solid #e0e0e0;border-radius:7px;font-family:'Lato',sans-serif;font-size:14px;color:var(--text);transition:border-color .2s;background:#fafafa;}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
-.field textarea{resize:vertical;min-height:60px;}
+.field textarea{resize:vertical;min-height:70px;}
 
 /* TABLE */
 .tbl-wrap{overflow-x:auto;margin-top:8px;}
-table.builder{width:100%;border-collapse:collapse;font-size:.78rem;}
-table.builder th{background:var(--navy);color:var(--gold);padding:7px 5px;text-align:left;font-size:.68rem;letter-spacing:.4px;white-space:nowrap;}
-table.builder td{padding:4px 3px;border-bottom:1px solid #f0f0f0;vertical-align:middle;}
-table.builder input{width:100%;border:1.5px solid #e8e8e8;border-radius:5px;padding:5px 4px;font-size:.78rem;background:#fafafa;font-family:'Lato',sans-serif;}
+table.builder{width:100%;border-collapse:collapse;font-size:13px;}
+table.builder th{background:var(--navy);color:var(--gold);padding:8px 6px;text-align:left;font-size:12px;letter-spacing:.4px;white-space:nowrap;}
+table.builder td{padding:5px 4px;border-bottom:1px solid #f0f0f0;vertical-align:middle;}
+table.builder input{width:100%;border:1.5px solid #e8e8e8;border-radius:5px;padding:6px 5px;font-size:13px;background:#fafafa;font-family:'Lato',sans-serif;}
 table.builder input:focus{outline:none;border-color:var(--gold);}
-table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-right:5px;white-space:nowrap;font-size:.78rem;}
-.btn-add{margin-top:9px;background:var(--navy);color:var(--gold);border:none;padding:7px 14px;border-radius:7px;cursor:pointer;font-size:.77rem;font-weight:700;letter-spacing:.4px;transition:background .2s;}
+table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-right:6px;white-space:nowrap;font-size:13px;}
+.btn-add{margin-top:10px;background:var(--navy);color:var(--gold);border:none;padding:8px 16px;border-radius:7px;cursor:pointer;font-size:13px;font-weight:700;letter-spacing:.4px;transition:background .2s;}
 .btn-add:hover{background:var(--navy2);}
-.btn-del{background:#fee2e2;color:#dc2626;border:none;width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:.8rem;font-weight:900;line-height:22px;text-align:center;transition:background .2s;}
+.btn-del{background:#fee2e2;color:#dc2626;border:none;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:.85rem;font-weight:900;line-height:24px;text-align:center;transition:background .2s;}
 .btn-del:hover{background:#fca5a5;}
-.subtotal-bar{background:#faf7ee;border:1.5px solid var(--gold);border-radius:8px;padding:11px 15px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;}
-.subtotal-bar .slabel{font-size:.8rem;color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
-.subtotal-bar .samount{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);font-weight:700;}
+
+/* LABOUR COST */
+.labour-row{display:flex;align-items:center;gap:12px;background:#f5f7ff;border:1.5px solid #c8d0e7;border-radius:8px;padding:11px 14px;margin-top:14px;}
+.labour-row label{font-size:14px;font-weight:700;color:var(--navy);white-space:nowrap;min-width:130px;}
+.labour-row input{flex:1;padding:9px 12px;border:1.5px solid #c8d0e7;border-radius:7px;font-family:'Lato',sans-serif;font-size:14px;color:var(--text);background:#fff;}
+.labour-row input:focus{outline:none;border-color:var(--gold);}
+
+/* NOTE BOX */
+.note-box{margin-top:14px;background:#fffbf0;border:1.5px solid var(--gold);border-radius:8px;padding:14px;}
+.note-box .note-label{font-size:.8rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;display:flex;align-items:center;gap:6px;}
+.note-box textarea{width:100%;border:1.5px solid #e8d8a0;border-radius:7px;padding:10px 12px;font-family:'Lato',sans-serif;font-size:14px;color:var(--text);background:#fff;resize:vertical;min-height:80px;}
+.note-box textarea:focus{outline:none;border-color:var(--gold);}
+
+/* SUBTOTAL */
+.subtotal-bar{background:#faf7ee;border:1.5px solid var(--gold);border-radius:8px;padding:13px 16px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;}
+.subtotal-bar .slabel{font-size:14px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;}
+.subtotal-bar .samount{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy);font-weight:700;}
+
 .export-sec{margin-top:20px;display:flex;flex-direction:column;gap:9px;}
-.btn-exp{padding:12px 18px;border:none;border-radius:9px;cursor:pointer;font-family:'Lato',sans-serif;font-size:.84rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;}
+.btn-exp{padding:13px 18px;border:none;border-radius:9px;cursor:pointer;font-family:'Lato',sans-serif;font-size:14px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;}
 .btn-wsig{background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold);box-shadow:0 4px 14px rgba(13,31,60,.4);}
 .btn-wsig:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(13,31,60,.5);}
 .btn-nosig{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 4px 14px rgba(201,162,39,.3);}
@@ -54,43 +70,54 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
 
 /* PREVIEW */
 .preview-panel{background:#fff;border-radius:14px;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,0.45);}
-.prev-lbl{font-size:.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;text-align:center;}
-.lh{background:#fff;border:1px solid #ddd;border-radius:3px;min-height:860px;position:relative;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.1);font-family:'Lato',sans-serif;}
+.prev-lbl{font-size:.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;text-align:center;}
+.lh{background:#fff;border:1px solid #ddd;border-radius:3px;min-height:900px;position:relative;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.1);font-family:'Lato',sans-serif;font-size:14px;}
 .lh-topbar{height:8px;background:linear-gradient(90deg,var(--navy) 75%,var(--gold) 100%);}
 .lh-hdr{display:flex;align-items:center;gap:14px;padding:10px 24px 8px;}
-.lh-hdr-logo{height:82px;width:82px;object-fit:contain;flex-shrink:0;border-radius:50%;}
+.lh-hdr-logo{height:88px;width:88px;object-fit:contain;flex-shrink:0;border-radius:50%;}
 .lh-hdr-text{flex:1;}
-.lh-hdr-text .co-name{font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px;font-family:'Playfair Display',serif;line-height:1.1;}
+.lh-hdr-text .co-name{font-size:1.6rem;font-weight:900;color:var(--navy);letter-spacing:1px;font-family:'Playfair Display',serif;line-height:1.1;}
 .lh-hdr-text .co-name span{color:var(--gold);}
-.lh-hdr-text .co-sub{font-size:.72rem;color:var(--text);font-weight:700;letter-spacing:.3px;margin-top:1px;}
-.lh-hdr-text .co-tel{font-size:.72rem;color:var(--navy);font-weight:700;margin-top:2px;}
-.lh-hdr-date{text-align:right;font-size:.78rem;color:var(--text);padding-left:10px;white-space:nowrap;}
-.lh-hdr-date strong{display:block;font-size:.85rem;color:var(--navy);}
+.lh-hdr-text .co-sub{font-size:13px;color:var(--text);font-weight:700;letter-spacing:.3px;margin-top:2px;}
+.lh-hdr-text .co-tel{font-size:13px;color:var(--navy);font-weight:700;margin-top:2px;}
+.lh-hdr-text .co-email{font-size:13px;color:#555;margin-top:1px;}
+.lh-hdr-date{text-align:right;font-size:14px;color:var(--text);padding-left:10px;white-space:nowrap;}
+.lh-hdr-date strong{display:block;font-size:15px;color:var(--navy);margin-top:2px;}
 .lh-divider{height:2px;background:linear-gradient(90deg,var(--navy) 80%,var(--gold) 100%);margin:0 16px;}
 .lh-wmark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.06;width:300px;height:300px;object-fit:contain;pointer-events:none;z-index:0;border-radius:50%;}
-.lh-body{padding:14px 24px;position:relative;z-index:1;}
+.lh-body{padding:16px 24px;position:relative;z-index:1;}
 .lh-subject{margin-bottom:14px;}
-.lh-subject .subj-text{font-size:.9rem;font-weight:900;color:var(--text);text-transform:uppercase;}
+.lh-subject .subj-text{font-size:15px;font-weight:900;color:var(--text);text-transform:uppercase;}
 .lh-subject .subj-text span{color:var(--navy);}
 .lh-to{margin-bottom:14px;}
-.lh-to .to-lbl{font-size:.72rem;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.8px;}
-.lh-to .to-content{font-size:.78rem;line-height:1.75;color:var(--text);border-left:3px solid var(--gold);padding-left:9px;margin-top:3px;}
-.lh-inv-table{width:100%;border-collapse:collapse;font-size:.72rem;margin-bottom:10px;}
-.lh-inv-table th{background:var(--navy);color:var(--gold);padding:6px 7px;text-align:left;font-size:.67rem;}
+.lh-to .to-lbl{font-size:13px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.8px;}
+.lh-to .to-content{font-size:14px;line-height:1.8;color:var(--text);border-left:3px solid var(--gold);padding-left:9px;margin-top:4px;}
+.lh-inv-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:10px;}
+.lh-inv-table th{background:var(--navy);color:var(--gold);padding:7px 8px;text-align:left;font-size:12px;}
 .lh-inv-table th:nth-child(3),.lh-inv-table td:nth-child(3){text-align:center;}
 .lh-inv-table th:nth-child(4),.lh-inv-table td:nth-child(4),
 .lh-inv-table th:nth-child(5),.lh-inv-table td:nth-child(5){text-align:right;}
-.lh-inv-table td{padding:5px 7px;border-bottom:1px solid #eee;color:var(--text);}
+.lh-inv-table td{padding:6px 8px;border-bottom:1px solid #eee;color:var(--text);font-size:13px;}
 .lh-inv-table tr:nth-child(even) td{background:#f9f9f9;}
-.lh-subtotal{text-align:right;padding:7px 7px 0;border-top:2px solid var(--navy);font-size:.8rem;color:var(--text);}
-.lh-subtotal strong{color:var(--navy);font-size:.88rem;}
-.lh-sign{padding:18px 24px 70px;position:relative;z-index:1;}
-.lh-sign .sign-lbl{font-size:.78rem;color:var(--text);font-weight:700;}
-.lh-sign .sig-img{height:52px;display:block;margin-top:3px;}
-.lh-sign .sign-name{font-size:.78rem;color:var(--text);font-weight:900;margin-top:4px;}
-.lh-footer{position:absolute;bottom:0;left:0;right:0;background:var(--navy);padding:9px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:5px;}
-.lh-footer .fc{display:flex;align-items:center;gap:4px;color:var(--gold);font-size:.6rem;font-weight:700;}
-@media(max-width:860px){.main{grid-template-columns:1fr;}}
+
+/* Labour cost line in preview */
+.lh-labour{display:flex;justify-content:space-between;align-items:center;padding:8px 8px;background:#f0f4ff;border:1px solid #c8d0e7;border-radius:5px;margin:10px 0;font-size:14px;}
+.lh-labour .ll-label{font-weight:700;color:var(--navy);}
+.lh-labour .ll-amount{font-weight:700;color:var(--navy);}
+
+/* Note in preview */
+.lh-note{background:#fffbf0;border-left:4px solid var(--gold);padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:14px;color:var(--text);line-height:1.7;}
+.lh-note .note-title{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;}
+
+.lh-subtotal{text-align:right;padding:8px 8px 0;border-top:2px solid var(--navy);font-size:14px;color:var(--text);}
+.lh-subtotal strong{color:var(--navy);font-size:16px;}
+.lh-sign{padding:18px 24px 76px;position:relative;z-index:1;}
+.lh-sign .sign-lbl{font-size:14px;color:var(--text);font-weight:700;}
+.lh-sign .sig-img{height:54px;display:block;margin-top:3px;}
+.lh-sign .sign-name{font-size:14px;color:var(--text);font-weight:900;margin-top:5px;}
+.lh-footer{position:absolute;bottom:0;left:0;right:0;background:var(--navy);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:5px;}
+.lh-footer .fc{display:flex;align-items:center;gap:4px;color:var(--gold);font-size:11px;font-weight:700;}
+@media(max-width:900px){.main{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -101,7 +128,7 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
 </div>
 
 <div class="main">
-  <!-- FORM -->
+  <!-- FORM PANEL -->
   <div class="form-panel">
     <h2>&#128203; Invoice Details</h2>
 
@@ -116,7 +143,7 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
       <input type="text" id="toName" placeholder="e.g. Mr. Emeka John" oninput="updatePreview()">
     </div>
     <div class="field"><label>Client Address</label>
-      <textarea id="toAddr" placeholder="e.g. No. 5 Ozubulu Road, Nnewi" oninput="updatePreview()"></textarea>
+      <textarea id="toAddr" placeholder="e.g. No. 5 Ozubulu Road, Nnewi"></textarea>
     </div>
     <div class="field"><label>Client Phone</label>
       <input type="text" id="toPhone" placeholder="e.g. 08012345678" oninput="updatePreview()">
@@ -131,20 +158,32 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
     <div class="tbl-wrap">
       <table class="builder">
         <thead><tr>
-          <th style="width:26px">S/N</th>
+          <th style="width:28px">S/N</th>
           <th>Description</th>
-          <th style="width:46px">Qty</th>
-          <th style="width:88px">Unit Rate (&#8358;)</th>
-          <th style="width:78px">Total (&#8358;)</th>
-          <th style="width:26px"></th>
+          <th style="width:48px">Qty</th>
+          <th style="width:90px">Unit Rate (&#8358;)</th>
+          <th style="width:80px">Total (&#8358;)</th>
+          <th style="width:28px"></th>
         </tr></thead>
         <tbody id="bldBody"></tbody>
       </table>
     </div>
     <button class="btn-add" onclick="addRow()">&#10010; Add Row</button>
 
+    <!-- LABOUR COST -->
+    <div class="labour-row">
+      <label>&#128296; Labour Cost (&#8358;)</label>
+      <input type="number" id="labourCost" min="0" step="0.01" value="0" placeholder="0.00" oninput="calcSubtotal();updatePreview()">
+    </div>
+
+    <!-- NOTE -->
+    <div class="note-box">
+      <div class="note-label">&#128221; Note / Remark (optional)</div>
+      <textarea id="docNote" placeholder="e.g. This quotation is valid for 30 days. Prices are subject to change after the validity period. Payment of 60% is required before work commences." oninput="updatePreview()"></textarea>
+    </div>
+
     <div class="subtotal-bar">
-      <span class="slabel">Subtotal</span>
+      <span class="slabel">Grand Total (Items + Labour)</span>
       <span class="samount" id="subtotalDisp">&#8358;0.00</span>
     </div>
 
@@ -154,7 +193,7 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
     </div>
   </div>
 
-  <!-- PREVIEW -->
+  <!-- PREVIEW PANEL -->
   <div class="preview-panel">
     <div class="prev-lbl">&#128196; Live Preview</div>
     <div class="lh">
@@ -166,6 +205,7 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
           <div class="co-name">CJ <span>SHELTERS</span></div>
           <div class="co-sub">Engineering And Construction Services</div>
           <div class="co-tel">TEL: 07068151088</div>
+          <div class="co-email">&#9993; chijikechukwumezie@gmail.com</div>
         </div>
         <div class="lh-hdr-date">
           <span>Date:</span>
@@ -177,20 +217,33 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
         <div class="lh-subject" id="prevSubjSec" style="display:none">
           <div class="subj-text"><span>SUBJECT:</span> <span id="prevSubj"></span></div>
         </div>
-        <div class="lh-to" id="prevToSec" style="display:none;margin-top:10px">
+        <div class="lh-to" id="prevToSec" style="display:none;margin-top:12px">
           <div class="to-lbl">TO:</div>
           <div class="to-content" id="prevTo"></div>
         </div>
-        <table class="lh-inv-table" style="margin-top:12px">
+        <table class="lh-inv-table" style="margin-top:14px">
           <thead><tr>
-            <th style="width:30px">S/N</th><th>Description</th>
-            <th style="width:40px">Qty</th>
-            <th style="width:90px">Unit Rate (&#8358;)</th>
-            <th style="width:90px">Total (&#8358;)</th>
+            <th style="width:32px">S/N</th><th>Description</th>
+            <th style="width:44px">Qty</th>
+            <th style="width:95px">Unit Rate (&#8358;)</th>
+            <th style="width:95px">Total (&#8358;)</th>
           </tr></thead>
           <tbody id="prevBody"></tbody>
         </table>
-        <div class="lh-subtotal">SUBTOTAL: <strong id="prevSubtotal">&#8358;0.00</strong></div>
+
+        <!-- Labour cost in preview -->
+        <div class="lh-labour" id="prevLabourRow" style="display:none">
+          <span class="ll-label">&#128296; Labour Cost</span>
+          <span class="ll-amount" id="prevLabour">&#8358;0.00</span>
+        </div>
+
+        <!-- Note in preview -->
+        <div class="lh-note" id="prevNoteBox" style="display:none">
+          <div class="note-title">&#128221; Note</div>
+          <div id="prevNoteText"></div>
+        </div>
+
+        <div class="lh-subtotal">GRAND TOTAL: <strong id="prevSubtotal">&#8358;0.00</strong></div>
       </div>
       <div class="lh-sign">
         <div class="sign-lbl">Signature:</div>
@@ -198,10 +251,11 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
         <div class="sign-name">MD. CJ SHELTERS</div>
       </div>
       <div class="lh-footer">
-        <div class="fc">&#128222; TEL: 07068151088</div>
-        <div class="fc">&#128247; Chijike David (Instagram)</div>
-        <div class="fc">&#128101; Chijike David C. (Facebook)</div>
-        <div class="fc">&#128205; Dumu's Foundation, Ozubulu Nnewi Road</div>
+        <div class="fc">&#128222; 07068151088</div>
+        <div class="fc">&#9993; chijikechukwumezie@gmail.com</div>
+        <div class="fc">&#128247; Chijike David</div>
+        <div class="fc">&#128101; Chijike David C.</div>
+        <div class="fc">&#128205; Dumu's Foundation, Ozubulu Nnewi Rd</div>
       </div>
     </div>
   </div>
@@ -219,7 +273,7 @@ function addRow() {
   const tr = document.createElement("tr");
   tr.id = id;
   tr.innerHTML = `
-    <td style="text-align:center;font-weight:700;color:#0d1f3c;">${rowCount}</td>
+    <td style="text-align:center;font-weight:700;color:#0d1f3c;font-size:13px">${rowCount}</td>
     <td><input type="text" placeholder="Description..." oninput="updatePreview()"></td>
     <td><input type="number" min="0" value="1" oninput="calcRow(this);updatePreview()"></td>
     <td><input type="number" min="0" step="0.01" value="0" oninput="calcRow(this);updatePreview()"></td>
@@ -248,13 +302,21 @@ function fmt(n) {
   return n.toLocaleString("en-NG",{minimumFractionDigits:2,maximumFractionDigits:2});
 }
 
-function getTotal() {
+function getItemsTotal() {
   let t=0;
   document.querySelectorAll("#bldBody tr").forEach(tr=>{
     const n=tr.querySelectorAll("input[type=number]");
     t+=(parseFloat(n[0]?.value)||0)*(parseFloat(n[1]?.value)||0);
   });
   return t;
+}
+
+function getLabour() {
+  return parseFloat(document.getElementById("labourCost").value)||0;
+}
+
+function getTotal() {
+  return getItemsTotal() + getLabour();
 }
 
 function calcSubtotal() {
@@ -265,13 +327,19 @@ function calcSubtotal() {
 
 function updatePreview() {
   calcSubtotal();
+
+  // Date
   const dv=document.getElementById("docDate").value;
   document.getElementById("prevDate").textContent=dv
     ? new Date(dv+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})
     : "—";
+
+  // Subject
   const subj=document.getElementById("docSubj").value.trim();
   document.getElementById("prevSubjSec").style.display=subj?"block":"none";
   document.getElementById("prevSubj").textContent=subj;
+
+  // TO
   const name=document.getElementById("toName").value.trim();
   const addr=document.getElementById("toAddr").value.trim();
   const phone=document.getElementById("toPhone").value.trim();
@@ -281,6 +349,8 @@ function updatePreview() {
   if(addr) toHtml+=addr.replace(/\n/g,"<br>")+"<br>";
   if(phone) toHtml+=`Tel: ${phone}`;
   document.getElementById("prevTo").innerHTML=toHtml;
+
+  // Table rows
   const pb=document.getElementById("prevBody");
   pb.innerHTML="";
   document.querySelectorAll("#bldBody tr").forEach((tr,i)=>{
@@ -293,50 +363,68 @@ function updatePreview() {
     nr.innerHTML=`<td>${i+1}</td><td>${desc}</td><td style="text-align:center">${qty}</td><td style="text-align:right">&#8358;${fmt(rate)}</td><td style="text-align:right">&#8358;${fmt(tot)}</td>`;
     pb.appendChild(nr);
   });
+
+  // Labour
+  const labour=getLabour();
+  const labourRow=document.getElementById("prevLabourRow");
+  labourRow.style.display = labour>0 ? "flex" : "none";
+  document.getElementById("prevLabour").innerHTML="&#8358;"+fmt(labour);
+
+  // Note
+  const note=document.getElementById("docNote").value.trim();
+  const noteBox=document.getElementById("prevNoteBox");
+  noteBox.style.display=note?"block":"none";
+  document.getElementById("prevNoteText").textContent=note;
+
+  // Signature
   document.getElementById("prevSigImg").style.display="block";
 }
 
+// ── PDF EXPORT ─────────────────────────────────────────
 function exportPDF(withSig) {
   const {jsPDF}=window.jspdf;
   const doc=new jsPDF({orientation:"portrait",unit:"mm",format:"a4"});
   const W=210,H=297,ML=14,MR=14;
+  const BODY_FONT=10;  // ~14px equivalent in PDF points
 
   // TOP BAR
   doc.setFillColor(13,31,60); doc.rect(0,0,W*0.78,7,"F");
   doc.setFillColor(201,162,39); doc.rect(W*0.78,0,W*0.22,7,"F");
 
-  // LOGO (white bg already in image)
-  try{ doc.addImage(LOGO_B64,"JPEG",ML,8,32,32); }catch(e){}
+  // LOGO
+  try{ doc.addImage(LOGO_B64,"JPEG",ML,8,34,34); }catch(e){}
 
   // COMPANY TEXT
-  doc.setFont("helvetica","bold"); doc.setFontSize(18); doc.setTextColor(13,31,60);
-  doc.text("CJ SHELTERS",ML+37,18);
-  doc.setFontSize(8.5); doc.setTextColor(60,60,60);
-  doc.text("Engineering And Construction Services",ML+37,24);
-  doc.setFontSize(8); doc.setTextColor(13,31,60);
-  doc.text("TEL: 07068151088",ML+37,30);
+  doc.setFont("helvetica","bold"); doc.setFontSize(20); doc.setTextColor(13,31,60);
+  doc.text("CJ SHELTERS",ML+38,18);
+  doc.setFontSize(9.5); doc.setTextColor(60,60,60);
+  doc.text("Engineering And Construction Services",ML+38,25);
+  doc.setFontSize(9); doc.setTextColor(13,31,60);
+  doc.text("TEL: 07068151088",ML+38,31);
+  doc.setFontSize(8.5); doc.setTextColor(80,80,80);
+  doc.text("chijikechukwumezie@gmail.com",ML+38,36.5);
 
   // DATE
   const dv=document.getElementById("docDate").value;
   const dateStr=dv?new Date(dv+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}):"—";
-  doc.setFont("helvetica","bold"); doc.setFontSize(9); doc.setTextColor(50,50,50);
+  doc.setFont("helvetica","bold"); doc.setFontSize(BODY_FONT); doc.setTextColor(50,50,50);
   doc.text("Date: "+dateStr,W-MR,18,{align:"right"});
 
   // DIVIDER
-  doc.setDrawColor(13,31,60); doc.setLineWidth(0.7); doc.line(ML,43,W-MR,43);
-  doc.setDrawColor(201,162,39); doc.setLineWidth(0.4); doc.line(ML,43.8,W-MR,43.8);
+  doc.setDrawColor(13,31,60); doc.setLineWidth(0.7); doc.line(ML,46,W-MR,46);
+  doc.setDrawColor(201,162,39); doc.setLineWidth(0.4); doc.line(ML,46.8,W-MR,46.8);
 
-  let y=51;
+  let y=55;
 
   // SUBJECT
   const subj=document.getElementById("docSubj").value.trim();
   if(subj){
-    doc.setFont("helvetica","bold"); doc.setFontSize(10); doc.setTextColor(30,30,30);
+    doc.setFont("helvetica","bold"); doc.setFontSize(11); doc.setTextColor(30,30,30);
     const st="SUBJECT: "+subj;
     doc.text(st,ML,y);
     doc.setDrawColor(30,30,30); doc.setLineWidth(0.3);
     doc.line(ML,y+0.8,ML+doc.getTextWidth(st),y+0.8);
-    y+=9;
+    y+=10;
   }
 
   // TO
@@ -349,15 +437,15 @@ function exportPDF(withSig) {
     adr.split("\n").forEach(l=>{ if(l.trim()) lines.push(l); });
     if(ph) lines.push("Tel: "+ph);
     doc.setFillColor(201,162,39);
-    doc.rect(ML,y-1,1.5,12+lines.length*5,"F");
-    doc.setFont("helvetica","bold"); doc.setFontSize(8.5); doc.setTextColor(13,31,60);
+    doc.rect(ML,y-1,1.5,13+lines.length*5.5,"F");
+    doc.setFont("helvetica","bold"); doc.setFontSize(9.5); doc.setTextColor(13,31,60);
     doc.text("TO:",ML+4,y+3);
-    doc.setFont("helvetica","normal"); doc.setTextColor(50,50,50);
-    lines.forEach((l,i)=>{ doc.text(l,ML+4,y+8+(i*5)); });
-    y+=16+lines.length*5;
+    doc.setFont("helvetica","normal"); doc.setFontSize(BODY_FONT); doc.setTextColor(50,50,50);
+    lines.forEach((l,i)=>{ doc.text(l,ML+4,y+9+(i*5.5)); });
+    y+=15+lines.length*5.5;
   }
 
-  // WATERMARK — faint logo centred
+  // WATERMARK
   try{
     doc.saveGraphicsState();
     doc.setGState(new doc.GState({opacity:0.07}));
@@ -381,12 +469,12 @@ function exportPDF(withSig) {
     head:[["S/N","Description","Qty","Unit Rate (N)","Total (N)"]],
     body:rows,
     margin:{left:ML,right:MR},
-    styles:{font:"helvetica",fontSize:8.5,textColor:[50,50,50],cellPadding:3.5},
-    headStyles:{fillColor:[13,31,60],textColor:[201,162,39],fontStyle:"bold",fontSize:8.5},
+    styles:{font:"helvetica",fontSize:BODY_FONT,textColor:[50,50,50],cellPadding:4},
+    headStyles:{fillColor:[13,31,60],textColor:[201,162,39],fontStyle:"bold",fontSize:9.5},
     columnStyles:{
-      0:{cellWidth:12,halign:"center",fontStyle:"bold"},
+      0:{cellWidth:13,halign:"center",fontStyle:"bold"},
       1:{cellWidth:"auto"},
-      2:{cellWidth:16,halign:"center"},
+      2:{cellWidth:17,halign:"center"},
       3:{cellWidth:40,halign:"right"},
       4:{cellWidth:40,halign:"right"}
     },
@@ -395,37 +483,73 @@ function exportPDF(withSig) {
     tableLineColor:[220,220,220],tableLineWidth:0.15,
   });
 
-  y=doc.lastAutoTable.finalY+5;
+  y=doc.lastAutoTable.finalY+6;
 
-  // SUBTOTAL
-  doc.setDrawColor(13,31,60); doc.setLineWidth(0.6); doc.line(ML,y,W-MR,y);
-  y+=6;
-  doc.setFont("helvetica","bold"); doc.setFontSize(9.5); doc.setTextColor(13,31,60);
-  doc.text("SUBTOTAL: N"+fmt(getTotal()),W-MR,y,{align:"right"});
-  y+=14;
+  // LABOUR COST ROW
+  const labour=getLabour();
+  if(labour>0){
+    doc.setFillColor(240,244,255);
+    doc.setDrawColor(200,208,231);
+    doc.setLineWidth(0.3);
+    doc.roundedRect(ML,y,W-ML-MR,10,1.5,1.5,"FD");
+    doc.setFont("helvetica","bold"); doc.setFontSize(BODY_FONT); doc.setTextColor(13,31,60);
+    doc.text("Labour Cost:",ML+4,y+7);
+    doc.text("N"+fmt(labour),W-MR-4,y+7,{align:"right"});
+    y+=14;
+  }
+
+  // NOTE
+  const note=document.getElementById("docNote").value.trim();
+  if(note){
+    doc.setFillColor(255,251,240);
+    doc.setDrawColor(201,162,39);
+    doc.setLineWidth(0.5);
+    doc.rect(ML,y,W-ML-MR,4,"F");  // gold left accent
+    doc.setFillColor(201,162,39);
+    doc.rect(ML,y,3,0,"F");
+    // Note box background
+    doc.setFillColor(255,251,240);
+    const noteLines=doc.splitTextToSize(note,W-ML-MR-14);
+    const noteH=10+noteLines.length*5.5;
+    doc.roundedRect(ML,y,W-ML-MR,noteH,1.5,1.5,"F");
+    doc.setFillColor(201,162,39);
+    doc.rect(ML,y,3,noteH,"F");
+    doc.setFont("helvetica","bold"); doc.setFontSize(8.5); doc.setTextColor(201,162,39);
+    doc.text("NOTE:",ML+6,y+6);
+    doc.setFont("helvetica","normal"); doc.setFontSize(BODY_FONT); doc.setTextColor(60,60,60);
+    noteLines.forEach((l,i)=>{ doc.text(l,ML+6,y+12+(i*5.5)); });
+    y+=noteH+6;
+  }
+
+  // GRAND TOTAL
+  doc.setDrawColor(13,31,60); doc.setLineWidth(0.7); doc.line(ML,y,W-MR,y);
+  y+=7;
+  doc.setFont("helvetica","bold"); doc.setFontSize(11); doc.setTextColor(13,31,60);
+  doc.text("GRAND TOTAL: N"+fmt(getTotal()),W-MR,y,{align:"right"});
+  y+=16;
 
   // SIGNATURE
-  doc.setFont("helvetica","bold"); doc.setFontSize(9); doc.setTextColor(50,50,50);
+  doc.setFont("helvetica","bold"); doc.setFontSize(BODY_FONT); doc.setTextColor(50,50,50);
   doc.text("Signature:",ML,y);
   y+=2;
   if(withSig){
-    try{ doc.addImage(SIG_B64,"JPEG",ML,y,50,22); }catch(e){}
-    y+=26;
+    try{ doc.addImage(SIG_B64,"JPEG",ML,y,52,23); }catch(e){}
+    y+=27;
   }else{
-    y+=10;
+    y+=12;
   }
-  doc.setFont("helvetica","bold"); doc.setFontSize(9); doc.setTextColor(30,30,30);
+  doc.setFont("helvetica","bold"); doc.setFontSize(BODY_FONT); doc.setTextColor(30,30,30);
   doc.text("MD. CJ SHELTERS",ML,y);
 
   // FOOTER
-  const fY=H-20;
-  doc.setFillColor(13,31,60); doc.rect(0,fY,W,20,"F");
+  const fY=H-22;
+  doc.setFillColor(13,31,60); doc.rect(0,fY,W,22,"F");
   doc.setFillColor(201,162,39); doc.rect(0,fY,W,1.2,"F");
-  const footers=["TEL: 07068151088","Chijike David (Instagram)","Chijike David C. (Facebook)","Dumu\'s Foundation, Ozubulu Nnewi Rd"];
+  const footers=["TEL: 07068151088","chijikechukwumezie@gmail.com","Chijike David (IG)","Chijike David C. (FB)","Dumu\'s Fdn, Ozubulu Nnewi"];
   const slot=(W-ML-MR)/footers.length;
   footers.forEach((t,i)=>{
-    doc.setFont("helvetica","bold"); doc.setFontSize(6.5); doc.setTextColor(201,162,39);
-    doc.text(t,ML+i*slot+slot/2,fY+12,{align:"center"});
+    doc.setFont("helvetica","bold"); doc.setFontSize(6); doc.setTextColor(201,162,39);
+    doc.text(t,ML+i*slot+slot/2,fY+13,{align:"center"});
   });
   doc.setFillColor(201,162,39); doc.rect(0,H-3,W,3,"F");
 
