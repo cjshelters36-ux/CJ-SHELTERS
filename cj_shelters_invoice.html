@@ -14,14 +14,10 @@
   --gold:#c9a227; --gold2:#e8c547;
   --white:#ffffff; --text:#2c3e50;
 }
-
-/* BASE: 18px for readability */
 body{font-family:'Lato',sans-serif;font-size:18px;background:linear-gradient(135deg,#0d1f3c 0%,#152848 50%,#0d1f3c 100%);min-height:100vh;padding:28px 16px;}
-
 .app-header{text-align:center;margin-bottom:24px;}
 .app-header h1{font-family:'Playfair Display',serif;color:var(--gold);font-size:2.3rem;letter-spacing:2px;}
 .app-header p{color:rgba(255,255,255,0.6);font-size:1rem;margin-top:3px;letter-spacing:1.5px;text-transform:uppercase;}
-
 .main{display:grid;grid-template-columns:460px 1fr;gap:22px;max-width:1380px;margin:0 auto;}
 
 /* FORM */
@@ -34,17 +30,25 @@ body{font-family:'Lato',sans-serif;font-size:18px;background:linear-gradient(135
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
 .field textarea{resize:vertical;min-height:70px;}
 
-/* ITEMS TABLE */
+/* ITEMS TABLE — wider qty/rate/total cols */
 .tbl-wrap{overflow-x:auto;margin-top:8px;}
-table.builder{width:100%;border-collapse:collapse;font-size:16px;}
-table.builder th{background:var(--navy);color:var(--gold);padding:9px 7px;text-align:left;font-size:14px;letter-spacing:.4px;white-space:nowrap;}
-table.builder td{padding:5px 4px;border-bottom:1px solid #f0f0f0;vertical-align:middle;}
-table.builder input{width:100%;border:1.5px solid #e8e8e8;border-radius:5px;padding:7px 6px;font-size:16px;background:#fafafa;font-family:'Lato',sans-serif;}
+table.builder{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed;}
+table.builder colgroup col.col-sn{width:36px;}
+table.builder colgroup col.col-desc{width:auto;}
+table.builder colgroup col.col-qty{width:70px;}
+table.builder colgroup col.col-rate{width:110px;}
+table.builder colgroup col.col-total{width:100px;}
+table.builder colgroup col.col-del{width:30px;}
+table.builder th{background:var(--navy);color:var(--gold);padding:9px 8px;text-align:left;font-size:13px;letter-spacing:.3px;white-space:nowrap;overflow:hidden;}
+table.builder th.right,table.builder td.right{text-align:right;}
+table.builder th.center,table.builder td.center{text-align:center;}
+table.builder td{padding:5px 6px;border-bottom:1px solid #f0f0f0;vertical-align:middle;}
+table.builder input{width:100%;border:1.5px solid #e8e8e8;border-radius:5px;padding:6px 6px;font-size:15px;background:#fafafa;font-family:'Lato',sans-serif;}
 table.builder input:focus{outline:none;border-color:var(--gold);}
-table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-right:6px;white-space:nowrap;font-size:16px;}
+table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-right:6px;white-space:nowrap;font-size:15px;}
 .btn-add{margin-top:10px;background:var(--navy);color:var(--gold);border:none;padding:9px 18px;border-radius:7px;cursor:pointer;font-size:16px;font-weight:700;letter-spacing:.4px;transition:background .2s;}
 .btn-add:hover{background:var(--navy2);}
-.btn-del{background:#fee2e2;color:#dc2626;border:none;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.9rem;font-weight:900;line-height:26px;text-align:center;transition:background .2s;}
+.btn-del{background:#fee2e2;color:#dc2626;border:none;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.85rem;font-weight:900;line-height:26px;text-align:center;transition:background .2s;}
 .btn-del:hover{background:#fca5a5;}
 
 /* LABOUR */
@@ -58,7 +62,7 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
 .subtotal-bar .slabel{font-size:18px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;}
 .subtotal-bar .samount{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);font-weight:700;}
 
-/* NOTE BOX */
+/* NOTE */
 .note-box{margin-top:14px;background:#fffbf0;border:1.5px solid var(--gold);border-radius:8px;padding:14px;}
 .note-box .note-label{font-size:.85rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
 .note-box textarea{width:100%;border:1.5px solid #e8d8a0;border-radius:7px;padding:11px 13px;font-family:'Lato',sans-serif;font-size:18px;color:var(--text);background:#fff;resize:vertical;min-height:90px;}
@@ -67,59 +71,71 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
 .export-sec{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
 .btn-exp{padding:14px 18px;border:none;border-radius:9px;cursor:pointer;font-family:'Lato',sans-serif;font-size:18px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;}
 .btn-wsig{background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold);box-shadow:0 4px 14px rgba(13,31,60,.4);}
-.btn-wsig:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(13,31,60,.5);}
+.btn-wsig:hover{transform:translateY(-2px);}
 .btn-nosig{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 4px 14px rgba(201,162,39,.3);}
-.btn-nosig:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,162,39,.4);}
+.btn-nosig:hover{transform:translateY(-2px);}
 
 /* PREVIEW */
 .preview-panel{background:#fff;border-radius:14px;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,0.45);}
 .prev-lbl{font-size:.8rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;text-align:center;}
 .lh{background:#fff;border:1px solid #ddd;border-radius:3px;min-height:920px;position:relative;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,.1);font-family:'Lato',sans-serif;font-size:15px;}
 .lh-topbar{height:8px;background:linear-gradient(90deg,var(--navy) 75%,var(--gold) 100%);}
-
-/* HEADER — TEL, email, slogan: 14px */
 .lh-hdr{display:flex;align-items:center;gap:14px;padding:10px 24px 8px;}
 .lh-hdr-logo{height:90px;width:90px;object-fit:contain;flex-shrink:0;border-radius:50%;}
-.lh-hdr-text{flex:1;}
+.lh-hdr-text{flex:1;min-width:0;}
 .lh-hdr-text .co-name{font-size:1.7rem;font-weight:900;color:var(--navy);letter-spacing:1px;font-family:'Playfair Display',serif;line-height:1.1;}
 .lh-hdr-text .co-name span{color:var(--gold);}
-.lh-hdr-text .co-sub{font-size:14px;color:var(--text);font-weight:700;letter-spacing:.3px;margin-top:3px;}
+.lh-hdr-text .co-sub{font-size:14px;color:var(--text);font-weight:700;margin-top:3px;}
 .lh-hdr-text .co-tel{font-size:14px;color:var(--navy);font-weight:700;margin-top:3px;}
 .lh-hdr-text .co-email{font-size:14px;color:#555;margin-top:2px;}
-.lh-hdr-date{text-align:right;font-size:14px;color:var(--text);padding-left:10px;white-space:nowrap;}
+.lh-hdr-date{text-align:right;font-size:14px;color:var(--text);padding-left:10px;white-space:nowrap;flex-shrink:0;}
 .lh-hdr-date strong{display:block;font-size:15px;color:var(--navy);margin-top:3px;}
-
 .lh-divider{height:2px;background:linear-gradient(90deg,var(--navy) 80%,var(--gold) 100%);margin:0 16px;}
 .lh-wmark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.06;width:300px;height:300px;object-fit:contain;pointer-events:none;z-index:0;border-radius:50%;}
 .lh-body{padding:16px 24px;position:relative;z-index:1;}
 
+/* SUBJECT — wraps to next line */
 .lh-subject{margin-bottom:14px;}
-.lh-subject .subj-text{font-size:16px;font-weight:900;color:var(--text);text-transform:uppercase;}
-.lh-subject .subj-text span{color:var(--navy);}
+.lh-subject .subj-text{
+  font-size:15px;font-weight:900;color:var(--text);text-transform:uppercase;
+  white-space:normal;         /* allow wrapping */
+  word-break:break-word;      /* break long words */
+  line-height:1.5;
+}
+.lh-subject .subj-text span.lbl{color:var(--navy);}
+
 .lh-to{margin-bottom:14px;}
 .lh-to .to-lbl{font-size:14px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.8px;}
 .lh-to .to-content{font-size:15px;line-height:1.8;color:var(--text);border-left:3px solid var(--gold);padding-left:9px;margin-top:4px;}
 
-.lh-inv-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:10px;}
-.lh-inv-table th{background:var(--navy);color:var(--gold);padding:7px 8px;text-align:left;font-size:13px;}
-.lh-inv-table th:nth-child(3),.lh-inv-table td:nth-child(3){text-align:center;}
-.lh-inv-table th:nth-child(4),.lh-inv-table td:nth-child(4),
-.lh-inv-table th:nth-child(5),.lh-inv-table td:nth-child(5){text-align:right;}
-.lh-inv-table td{padding:6px 8px;border-bottom:1px solid #eee;color:var(--text);font-size:14px;}
+/* PREVIEW TABLE — fixed layout with generous column widths */
+.lh-inv-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:10px;table-layout:fixed;}
+.lh-inv-table col.pc-sn{width:34px;}
+.lh-inv-table col.pc-desc{width:auto;}
+.lh-inv-table col.pc-qty{width:52px;}   /* wider — fits 4-digit numbers */
+.lh-inv-table col.pc-rate{width:90px;}
+.lh-inv-table col.pc-total{width:90px;}
+.lh-inv-table th{background:var(--navy);color:var(--gold);padding:7px 6px;text-align:left;font-size:12px;overflow:hidden;}
+.lh-inv-table th.rc,.lh-inv-table td.rc{text-align:right;}
+.lh-inv-table th.cc,.lh-inv-table td.cc{text-align:center;}
+.lh-inv-table td{padding:6px 6px;border-bottom:1px solid #eee;color:var(--text);font-size:13px;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+/* description can wrap */
+.lh-inv-table td.desc-cell{white-space:normal;word-break:break-word;}
 .lh-inv-table tr:nth-child(even) td{background:#f9f9f9;}
 
 /* Labour in preview */
-.lh-labour{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;background:#f0f4ff;border:1px solid #c8d0e7;border-radius:5px;margin:10px 0;font-size:15px;}
+.lh-labour{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;background:#f0f4ff;border:1px solid #c8d0e7;border-radius:5px;margin:10px 0;font-size:14px;}
 .lh-labour .ll-label{font-weight:700;color:var(--navy);}
-.lh-labour .ll-amount{font-weight:700;color:var(--navy);}
+.lh-labour .ll-amount{font-weight:700;color:var(--navy);white-space:nowrap;}
 
-/* Grand total in preview — comes BEFORE note */
+/* Grand total */
 .lh-subtotal{text-align:right;padding:9px 8px;border-top:2.5px solid var(--navy);font-size:15px;color:var(--text);margin-bottom:10px;}
 .lh-subtotal strong{color:var(--navy);font-size:17px;}
 
-/* Note in preview */
-.lh-note{background:#fffbf0;border-left:4px solid var(--gold);padding:11px 14px;border-radius:0 6px 6px 0;font-size:15px;color:var(--text);line-height:1.75;}
-.lh-note .note-title{font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;}
+/* Note */
+.lh-note{background:#fffbf0;border-left:4px solid var(--gold);padding:11px 14px;border-radius:0 6px 6px 0;font-size:14px;color:var(--text);line-height:1.75;word-break:break-word;}
+.lh-note .note-title{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;}
 
 .lh-sign{padding:18px 24px 80px;position:relative;z-index:1;}
 .lh-sign .sign-lbl{font-size:15px;color:var(--text);font-weight:700;}
@@ -127,7 +143,6 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
 .lh-sign .sign-name{font-size:15px;color:var(--text);font-weight:900;margin-top:5px;}
 .lh-footer{position:absolute;bottom:0;left:0;right:0;background:var(--navy);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:5px;}
 .lh-footer .fc{display:flex;align-items:center;gap:4px;color:var(--gold);font-size:11px;font-weight:700;}
-
 @media(max-width:940px){.main{grid-template-columns:1fr;}}
 </style>
 </head>
@@ -168,13 +183,18 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
     <div class="section-lbl">Items / Services</div>
     <div class="tbl-wrap">
       <table class="builder">
+        <colgroup>
+          <col class="col-sn"><col class="col-desc">
+          <col class="col-qty"><col class="col-rate">
+          <col class="col-total"><col class="col-del">
+        </colgroup>
         <thead><tr>
-          <th style="width:28px">S/N</th>
+          <th>S/N</th>
           <th>Description</th>
-          <th style="width:50px">Qty</th>
-          <th style="width:95px">Unit Rate (&#8358;)</th>
-          <th style="width:85px">Total (&#8358;)</th>
-          <th style="width:28px"></th>
+          <th class="center">Qty</th>
+          <th class="right">Unit Rate (&#8358;)</th>
+          <th class="right">Total (&#8358;)</th>
+          <th></th>
         </tr></thead>
         <tbody id="bldBody"></tbody>
       </table>
@@ -187,13 +207,13 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
       <input type="number" id="labourCost" min="0" step="0.01" value="0" placeholder="0.00" oninput="calcSubtotal();updatePreview()">
     </div>
 
-    <!-- GRAND TOTAL — above note -->
+    <!-- GRAND TOTAL -->
     <div class="subtotal-bar">
       <span class="slabel">Grand Total</span>
       <span class="samount" id="subtotalDisp">&#8358;0.00</span>
     </div>
 
-    <!-- NOTE — below grand total -->
+    <!-- NOTE -->
     <div class="note-box">
       <div class="note-label">&#128221; Note / Remark (optional)</div>
       <textarea id="docNote" placeholder="e.g. This quotation is valid for 30 days. Prices are subject to change after the validity period. 60% payment required before work commences." oninput="updatePreview()"></textarea>
@@ -227,8 +247,9 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
       <div class="lh-divider"></div>
       <div class="lh-body">
 
+        <!-- Subject — wraps cleanly -->
         <div class="lh-subject" id="prevSubjSec" style="display:none">
-          <div class="subj-text"><span>SUBJECT:</span> <span id="prevSubj"></span></div>
+          <div class="subj-text"><span class="lbl">SUBJECT: </span><span id="prevSubj"></span></div>
         </div>
 
         <div class="lh-to" id="prevToSec" style="display:none;margin-top:12px">
@@ -236,26 +257,29 @@ table.builder .tcell{font-weight:700;color:var(--navy);text-align:right;padding-
           <div class="to-content" id="prevTo"></div>
         </div>
 
+        <!-- Preview table — fixed columns, generous widths -->
         <table class="lh-inv-table" style="margin-top:14px">
+          <colgroup>
+            <col class="pc-sn"><col class="pc-desc">
+            <col class="pc-qty"><col class="pc-rate"><col class="pc-total">
+          </colgroup>
           <thead><tr>
-            <th style="width:32px">S/N</th><th>Description</th>
-            <th style="width:44px">Qty</th>
-            <th style="width:95px">Unit Rate (&#8358;)</th>
-            <th style="width:95px">Total (&#8358;)</th>
+            <th>S/N</th>
+            <th>Description</th>
+            <th class="cc">Qty</th>
+            <th class="rc">Unit Rate (&#8358;)</th>
+            <th class="rc">Total (&#8358;)</th>
           </tr></thead>
           <tbody id="prevBody"></tbody>
         </table>
 
-        <!-- Labour in preview -->
         <div class="lh-labour" id="prevLabourRow" style="display:none">
           <span class="ll-label">&#128296; Labour Cost</span>
           <span class="ll-amount" id="prevLabour">&#8358;0.00</span>
         </div>
 
-        <!-- GRAND TOTAL — above note in preview -->
         <div class="lh-subtotal">GRAND TOTAL: <strong id="prevSubtotal">&#8358;0.00</strong></div>
 
-        <!-- Note — below grand total in preview -->
         <div class="lh-note" id="prevNoteBox" style="display:none">
           <div class="note-title">&#128221; Note</div>
           <div id="prevNoteText"></div>
@@ -289,10 +313,10 @@ function addRow() {
   const tr = document.createElement("tr");
   tr.id = id;
   tr.innerHTML = `
-    <td style="text-align:center;font-weight:700;color:#0d1f3c;font-size:15px">${rowCount}</td>
+    <td style="text-align:center;font-weight:700;color:#0d1f3c;font-size:14px">${rowCount}</td>
     <td><input type="text" placeholder="Description..." oninput="updatePreview()"></td>
-    <td><input type="number" min="0" value="1" oninput="calcRow(this);updatePreview()"></td>
-    <td><input type="number" min="0" step="0.01" value="0" oninput="calcRow(this);updatePreview()"></td>
+    <td><input type="number" min="0" value="1" style="text-align:center" oninput="calcRow(this);updatePreview()"></td>
+    <td><input type="number" min="0" step="0.01" value="0" style="text-align:right" oninput="calcRow(this);updatePreview()"></td>
     <td class="tcell">&#8358;0.00</td>
     <td><button class="btn-del" onclick="delRow('${id}')">&#10005;</button></td>
   `;
@@ -326,14 +350,8 @@ function getItemsTotal() {
   });
   return t;
 }
-
-function getLabour() {
-  return parseFloat(document.getElementById("labourCost").value)||0;
-}
-
-function getTotal() {
-  return getItemsTotal()+getLabour();
-}
+function getLabour(){ return parseFloat(document.getElementById("labourCost").value)||0; }
+function getTotal(){ return getItemsTotal()+getLabour(); }
 
 function calcSubtotal() {
   const t=getTotal();
@@ -343,11 +361,9 @@ function calcSubtotal() {
 
 function updatePreview() {
   calcSubtotal();
-
   const dv=document.getElementById("docDate").value;
   document.getElementById("prevDate").textContent=dv
-    ?new Date(dv+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})
-    :"—";
+    ?new Date(dv+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}):"—";
 
   const subj=document.getElementById("docSubj").value.trim();
   document.getElementById("prevSubjSec").style.display=subj?"block":"none";
@@ -372,7 +388,12 @@ function updatePreview() {
     const rate=parseFloat(inps[2]?.value)||0;
     const tot=(parseFloat(qty)||0)*rate;
     const nr=document.createElement("tr");
-    nr.innerHTML=`<td>${i+1}</td><td>${desc}</td><td style="text-align:center">${qty}</td><td style="text-align:right">&#8358;${fmt(rate)}</td><td style="text-align:right">&#8358;${fmt(tot)}</td>`;
+    // qty gets its own cell, no wrapping — using nowrap on that cell
+    nr.innerHTML=`<td style="text-align:center">${i+1}</td>
+      <td class="desc-cell">${desc}</td>
+      <td class="cc" style="white-space:nowrap">${qty}</td>
+      <td class="rc" style="white-space:nowrap">&#8358;${fmt(rate)}</td>
+      <td class="rc" style="white-space:nowrap">&#8358;${fmt(tot)}</td>`;
     pb.appendChild(nr);
   });
 
@@ -391,20 +412,15 @@ function exportPDF(withSig) {
   const {jsPDF}=window.jspdf;
   const doc=new jsPDF({orientation:"portrait",unit:"mm",format:"a4"});
   const W=210,H=297,ML=14,MR=14;
-  const BFONT=11; // body font ~18px equivalent
+  const BFONT=11;
 
-  // TOP BAR
   doc.setFillColor(13,31,60); doc.rect(0,0,W*0.78,7,"F");
   doc.setFillColor(201,162,39); doc.rect(W*0.78,0,W*0.22,7,"F");
 
-  // LOGO
   try{ doc.addImage(LOGO_B64,"JPEG",ML,8,36,36); }catch(e){}
 
-  // COMPANY NAME
   doc.setFont("helvetica","bold"); doc.setFontSize(21); doc.setTextColor(13,31,60);
   doc.text("CJ SHELTERS",ML+40,19);
-
-  // Slogan & contact — 14pt equivalent (10pt in PDF)
   doc.setFont("helvetica","bold"); doc.setFontSize(10); doc.setTextColor(60,60,60);
   doc.text("Engineering And Construction Services",ML+40,26);
   doc.setFontSize(10); doc.setTextColor(13,31,60);
@@ -412,27 +428,29 @@ function exportPDF(withSig) {
   doc.setFontSize(10); doc.setTextColor(80,80,80);
   doc.text("chijikechukwumezie@gmail.com",ML+40,38);
 
-  // DATE
   const dv=document.getElementById("docDate").value;
   const dateStr=dv?new Date(dv+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}):"—";
   doc.setFont("helvetica","bold"); doc.setFontSize(BFONT); doc.setTextColor(50,50,50);
   doc.text("Date: "+dateStr,W-MR,19,{align:"right"});
 
-  // DIVIDER
   doc.setDrawColor(13,31,60); doc.setLineWidth(0.7); doc.line(ML,48,W-MR,48);
   doc.setDrawColor(201,162,39); doc.setLineWidth(0.4); doc.line(ML,48.8,W-MR,48.8);
 
   let y=57;
 
-  // SUBJECT
+  // SUBJECT — wrap long text
   const subj=document.getElementById("docSubj").value.trim();
   if(subj){
-    doc.setFont("helvetica","bold"); doc.setFontSize(12); doc.setTextColor(30,30,30);
-    const st="SUBJECT: "+subj;
-    doc.text(st,ML,y);
+    doc.setFont("helvetica","bold"); doc.setFontSize(11); doc.setTextColor(30,30,30);
+    const prefix="SUBJECT: ";
+    const fullText=prefix+subj;
+    const maxW=W-ML-MR;
+    const lines=doc.splitTextToSize(fullText,maxW);
+    lines.forEach((l,i)=>{ doc.text(l,ML,y+(i*6)); });
+    // underline first line only
     doc.setDrawColor(30,30,30); doc.setLineWidth(0.3);
-    doc.line(ML,y+0.8,ML+doc.getTextWidth(st),y+0.8);
-    y+=11;
+    doc.line(ML,y+0.8,ML+doc.getTextWidth(lines[0]),y+0.8);
+    y+=lines.length*6+5;
   }
 
   // TO
@@ -450,18 +468,17 @@ function exportPDF(withSig) {
     doc.text("TO:",ML+4,y+4);
     doc.setFont("helvetica","normal"); doc.setFontSize(BFONT); doc.setTextColor(50,50,50);
     lines.forEach((l,i)=>{ doc.text(l,ML+4,y+10+(i*6)); });
-    y+=16+lines.length*6;
+    y+=15+lines.length*6;
   }
 
-  // WATERMARK
   try{
     doc.saveGraphicsState();
     doc.setGState(new doc.GState({opacity:0.07}));
     doc.addImage(LOGO_B64,"JPEG",55,100,100,100);
     doc.restoreGraphicsState();
-  }catch(e){ try{ doc.addImage(LOGO_B64,"JPEG",65,108,80,80); }catch(e2){} }
+  }catch(e){}
 
-  // ITEMS TABLE
+  // TABLE — key fix: Qty column wide enough for 4-digit numbers, no wrapping
   const rows=[];
   document.querySelectorAll("#bldBody tr").forEach((tr,i)=>{
     const inps=tr.querySelectorAll("input");
@@ -469,7 +486,7 @@ function exportPDF(withSig) {
     const qty=inps[1]?.value||"0";
     const rate=parseFloat(inps[2]?.value)||0;
     const tot=(parseFloat(qty)||0)*rate;
-    rows.push([i+1,desc,qty,"N"+fmt(rate),"N"+fmt(tot)]);
+    rows.push([i+1, desc, qty, "N"+fmt(rate), "N"+fmt(tot)]);
   });
 
   doc.autoTable({
@@ -477,14 +494,14 @@ function exportPDF(withSig) {
     head:[["S/N","Description","Qty","Unit Rate (N)","Total (N)"]],
     body:rows,
     margin:{left:ML,right:MR},
-    styles:{font:"helvetica",fontSize:BFONT,textColor:[50,50,50],cellPadding:4.5},
+    styles:{font:"helvetica",fontSize:BFONT,textColor:[50,50,50],cellPadding:{top:4,bottom:4,left:4,right:4},overflow:"linebreak"},
     headStyles:{fillColor:[13,31,60],textColor:[201,162,39],fontStyle:"bold",fontSize:10},
     columnStyles:{
-      0:{cellWidth:13,halign:"center",fontStyle:"bold"},
-      1:{cellWidth:"auto"},
-      2:{cellWidth:17,halign:"center"},
-      3:{cellWidth:42,halign:"right"},
-      4:{cellWidth:42,halign:"right"}
+      0:{cellWidth:13, halign:"center", fontStyle:"bold"},
+      1:{cellWidth:"auto"},            // description — stretches, wraps if needed
+      2:{cellWidth:22, halign:"center", overflow:"visible"},  // Qty — wide enough for 4 digits
+      3:{cellWidth:44, halign:"right"}, // Unit Rate — full number on one line
+      4:{cellWidth:44, halign:"right"}  // Total — full number on one line
     },
     alternateRowStyles:{fillColor:[248,248,250]},
     rowPageBreak:"avoid",
@@ -505,22 +522,21 @@ function exportPDF(withSig) {
     y+=15;
   }
 
-  // GRAND TOTAL — before note
+  // GRAND TOTAL
   doc.setDrawColor(13,31,60); doc.setLineWidth(0.8); doc.line(ML,y,W-MR,y);
   y+=8;
   doc.setFont("helvetica","bold"); doc.setFontSize(13); doc.setTextColor(13,31,60);
   doc.text("GRAND TOTAL: N"+fmt(getTotal()),W-MR,y,{align:"right"});
   y+=14;
 
-  // NOTE — after grand total
+  // NOTE
   const note=document.getElementById("docNote").value.trim();
   if(note){
     const noteLines=doc.splitTextToSize(note,W-ML-MR-14);
     const noteH=12+noteLines.length*6;
     doc.setFillColor(255,251,240);
     doc.roundedRect(ML,y,W-ML-MR,noteH,1.5,1.5,"F");
-    doc.setFillColor(201,162,39);
-    doc.rect(ML,y,3,noteH,"F");
+    doc.setFillColor(201,162,39); doc.rect(ML,y,3,noteH,"F");
     doc.setFont("helvetica","bold"); doc.setFontSize(9); doc.setTextColor(201,162,39);
     doc.text("NOTE:",ML+6,y+7);
     doc.setFont("helvetica","normal"); doc.setFontSize(BFONT); doc.setTextColor(60,60,60);
@@ -530,18 +546,14 @@ function exportPDF(withSig) {
 
   // SIGNATURE
   doc.setFont("helvetica","bold"); doc.setFontSize(BFONT); doc.setTextColor(50,50,50);
-  doc.text("Signature:",ML,y);
-  y+=2;
+  doc.text("Signature:",ML,y); y+=2;
   if(withSig){
     try{ doc.addImage(SIG_B64,"JPEG",ML,y,54,24); }catch(e){}
     y+=28;
-  }else{
-    y+=13;
-  }
+  }else{ y+=13; }
   doc.setFont("helvetica","bold"); doc.setFontSize(BFONT); doc.setTextColor(30,30,30);
   doc.text("MD. CJ SHELTERS",ML,y);
 
-  // FOOTER
   const fY=H-22;
   doc.setFillColor(13,31,60); doc.rect(0,fY,W,22,"F");
   doc.setFillColor(201,162,39); doc.rect(0,fY,W,1.2,"F");
@@ -552,7 +564,6 @@ function exportPDF(withSig) {
     doc.text(t,ML+i*slot+slot/2,fY+13,{align:"center"});
   });
   doc.setFillColor(201,162,39); doc.rect(0,H-3,W,3,"F");
-
   doc.save(withSig?"CJ_Shelters_Invoice_SIGNED.pdf":"CJ_Shelters_Invoice.pdf");
 }
 
